@@ -1,14 +1,21 @@
 import React from 'react';
-import { Box, Container, Button } from '@material-ui/core';
+import styled from 'styled-components';
+import { Box, Container, AppBar, Typography } from '@material-ui/core';
+
+const StyledAppBar = styled(AppBar)`
+  padding: 2rem;
+`;
 
 const Header: React.FC = () => {
   return (
-    <Box component="header">
-      <Container maxWidth="lg">
-        <Button color="primary" variant="contained" size="large">
-          Header
-        </Button>
-      </Container>
+    <Box component="nav">
+        <StyledAppBar position="static">
+          <Container maxWidth="lg" component="nav">
+            <Typography variant="h2" component="p">
+                Listagem de pokémons
+            </Typography>
+          </Container>
+        </StyledAppBar>
     </Box>
   );
 };
